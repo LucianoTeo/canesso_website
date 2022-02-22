@@ -1,0 +1,35 @@
+.facilities {
+  background: #ffe8e3;
+  overflow: auto;
+  padding: 2rem 0;
+
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & + .column {
+      margin-left: 2rem;
+    }
+
+    figure {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    span {
+      display: block;
+      max-width: 150px;
+      color: $orange;
+      font-weight: bold;
+    }
+  }
+}

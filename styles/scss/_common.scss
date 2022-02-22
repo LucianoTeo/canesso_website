@@ -1,0 +1,409 @@
+.btn {
+  &__primary {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid $orange;
+    color: $orange;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    font-weight: 600;
+
+    > svg {
+      margin-left: 0.5rem;
+    }
+
+    transition: 0.2s linear;
+
+    &:hover {
+      background: $orange;
+      color: white;
+
+      svg {
+        path {
+          stroke: white;
+        }
+      }
+    }
+
+    &.colored {
+      background: $orange;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: $orange;
+
+        svg {
+          path {
+            stroke: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section {
+  padding: 6rem 0 0 0;
+
+  .title_subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+
+    p {
+      margin-top: 0.5rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .content {
+    margin-top: 3rem;
+  }
+}
+
+.tabs {
+  margin-top: 3rem;
+
+  > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+    padding: 1rem 0;
+
+    > li {
+      width: 100%;
+      max-width: 200px;
+      background: $gray;
+
+      & + li {
+        margin-left: 0.5rem;
+      }
+
+      > button {
+        display: block;
+        padding: 1rem 2rem;
+        width: 100%;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      &.active {
+        button {
+          background: $orange;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &_body {
+    margin-top: 2rem;
+
+    .tabs_content > div {
+      width: calc(100% / 3 - 1rem);
+      position: relative;
+    }
+
+    &_item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        > div {
+          > div {
+            width: calc(100% / 2 - 1rem) !important;
+
+            &:nth-child(3) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.grandient_black {
+  background: transparent linear-gradient(230deg, #000000 0%, #4b4b4b 100%) 0%
+    0% no-repeat padding-box;
+  padding: 5rem 0;
+
+  width: 100%;
+
+  .column {
+    width: 50%;
+
+    .content_left {
+      width: 100%;
+      max-width: 420px;
+
+      margin-left: auto;
+      padding-right: 3rem;
+
+      > div {
+        margin: 0 auto;
+
+        h3 {
+          color: white;
+          font-weight: normal;
+          font-size: 1.5rem;
+
+          span {
+            font-weight: bold;
+            font-size: inherit;
+          }
+        }
+
+        strong {
+          display: block;
+          margin: 2rem 0;
+          color: white;
+          font-size: 1.06rem;
+        }
+      }
+    }
+
+    .content_right {
+      border-left: 1px solid #323232;
+      margin-right: auto;
+      padding-left: 3rem;
+
+      width: 100%;
+
+      ul {
+        li {
+          > div {
+            display: flex;
+            align-items: center;
+
+            img {
+              max-width: 90px;
+            }
+
+            > div {
+              max-width: 250px;
+              margin-left: 1rem;
+              color: white;
+
+              strong {
+                display: block;
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 3rem;
+
+        small {
+          display: block;
+          font-weight: bold;
+          color: white;
+          margin-bottom: 1rem;
+
+          max-width: 250px;
+        }
+
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .d__flex {
+      flex-wrap: wrap;
+
+      .column {
+        width: 100%;
+
+        &:nth-child(2) {
+          margin-top: 1rem;
+        }
+
+        .content_right,
+        .content_left {
+          border-left: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.gradient_orange {
+  padding: 0.5rem 0;
+  background: transparent linear-gradient(270deg, #ee532f 0%, #f27457 100%) 0%
+    0% no-repeat padding-box;
+}
+
+.gradient_sections_orange {
+  background: transparent linear-gradient(180deg, #fff7f5 0%, #ffd5cb 100%) 0%
+    0% no-repeat padding-box;
+}
+
+.qualities_columns {
+  .quality {
+    width: 100%;
+
+    height: 520px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    > div {
+      max-width: 420px;
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      strong {
+        display: block;
+        margin: 1rem 0;
+        font-size: 3.5rem;
+      }
+
+      > button {
+        margin-top: 1rem;
+        max-width: 200px;
+      }
+    }
+
+    &:first-child {
+      background-image: url("../../images/armacoes-de-qualidade.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      background-image: url("../../images/oculos-de-sol.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  @media (max-width: 720px) {
+    > div {
+      flex-direction: column;
+    }
+
+    .quality {
+      height: 100%;
+      padding: 8rem 4rem 3rem;
+
+      button {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.depoiments {
+  .title {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .content {
+    margin-top: 4rem;
+
+    figure {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        max-width: 54px;
+        margin-right: 1rem;
+      }
+
+      figcaption {
+        span {
+          display: block;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #333333;
+    }
+  }
+}
+
+footer {
+  padding: 3rem 0;
+
+  .logo {
+    width: 100%;
+    max-width: 350px;
+
+    p {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .column {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  ul {
+    li {
+      & + li {
+        margin-top: 1rem;
+      }
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  input {
+    margin-bottom: 0.5rem;
+    border: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 991px) {
+    .d__flex {
+      flex-direction: column;
+    }
+    .logo {
+      margin-bottom: 2rem;
+    }
+    .column {
+      margin-bottom: 2rem;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+a {
+  color: $orange;
+}

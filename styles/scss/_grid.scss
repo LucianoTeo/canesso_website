@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  padding: 0 2rem;
+}
+
+.d_ {
+  &_flex {
+    display: flex;
+  }
+
+  &_between {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_start {
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
